@@ -12,6 +12,7 @@ setopt HIST_IGNORE_SPACE
 setopt NO_HIST_BEEP
 setopt NO_CLOBBER
 
+alias ll='ls -al'
 alias cp='cp -i'
 alias mv='mv -i'
 alias vim='nvim'
