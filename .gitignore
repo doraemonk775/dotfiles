@@ -1,0 +1,12 @@
+## all ignore
+/*
+
+## not ignore
+!/.config/
+!/.config/**
+/.config/karabiner/**
+!/.config/karabiner/karabiner.json
+!.gitignore
+!/.zshenv
+!/.zshrc
+!/README.md
