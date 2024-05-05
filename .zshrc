@@ -16,3 +16,5 @@ alias ll='ls -al'
 alias cp='cp -i'
 alias mv='mv -i'
 alias vim='nvim'
+
+bindkey -e
