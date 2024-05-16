@@ -10,4 +10,5 @@ case `uname -s` in
 esac
 export PATH
 
+export LANG="ja_JP.UTF-8"
 export EDITOR=`which nvim`
