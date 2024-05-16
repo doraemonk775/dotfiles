@@ -1,4 +1,4 @@
-PROMPT='%m:%~%# '
+PROMPT='%F{45}%m%f:%~%# '
 
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
