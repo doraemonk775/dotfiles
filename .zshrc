@@ -1,4 +1,8 @@
-PROMPT='%F{45}%m%f:%~%# '
+if [[ -n $SSH_CONNECTION ]]; then
+    PROMPT='%F{165}%m%f:%~%# '
+else
+    PROMPT='%F{45}%m%f:%~%# '
+fi
 
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
