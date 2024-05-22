@@ -1,20 +1,16 @@
-vim.o.number = true
-vim.o.tabstop = 4
-vim.o.shiftwidth = 4
-vim.o.expandtab = true
-vim.o.cursorline = true
-vim.o.scrolloff = 8
-vim.o.autoread = true
-vim.o.swapfile = false
-vim.o.clipboard = 'unnamedplus'
-
-vim.o.incsearch = true
-vim.o.hlsearch = true
-vim.o.ignorecase = true
-vim.o.smartcase = true
-
-vim.o.relativenumber = true
-vim.o.showtabline = 4
+vim.opt.autoread = true
+vim.opt.clipboard = 'unnamedplus'
+vim.opt.cursorline = true
+vim.opt.expandtab = true
+vim.opt.hlsearch = true
+vim.opt.ignorecase = true
+vim.opt.incsearch = true
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.shiftwidth = 4
+vim.opt.showtabline = 4
+vim.opt.smartcase = true
+vim.opt.tabstop = 4
 
 vim.cmd('set viminfo+=:0')
 
