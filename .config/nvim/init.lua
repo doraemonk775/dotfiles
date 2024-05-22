@@ -12,8 +12,6 @@ vim.opt.showtabline = 4
 vim.opt.smartcase = true
 vim.opt.tabstop = 4
 
-vim.cmd('set viminfo+=:0')
-
 vim.api.nvim_set_keymap('c', '<C-a>', '<Home>', { noremap = true, silent = false })
 vim.api.nvim_set_keymap('c', '<C-f>', '<Right>', { noremap = true, silent = false })
 vim.api.nvim_set_keymap('c', '<C-b>', '<Left>', { noremap = true, silent = false })
@@ -23,3 +21,5 @@ vim.api.nvim_set_keymap('n', ']t', ':tabnext<CR>', { noremap = true, silent = tr
 vim.api.nvim_set_keymap('n', '[T', ':tabfirst<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', ']T', ':tablast<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
+
+vim.cmd('set viminfo=')
