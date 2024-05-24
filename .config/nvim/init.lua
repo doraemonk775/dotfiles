@@ -23,3 +23,8 @@ vim.api.nvim_set_keymap('n', ']T', ':tablast<CR>', { noremap = true, silent = tr
 vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
 
 vim.cmd('set viminfo=')
+
+require('lazy').setup({
+    { 'junegunn/fzf', run = function() vim.fn['fzf#install']() end },
+    'junegunn/fzf.vim',
+})
