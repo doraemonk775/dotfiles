@@ -7,6 +7,7 @@ vim.opt.ignorecase = true
 vim.opt.incsearch = true
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.shada = ""
 vim.opt.shiftwidth = 4
 vim.opt.showtabline = 4
 vim.opt.smartcase = true
@@ -21,8 +22,6 @@ vim.api.nvim_set_keymap('n', ']t', ':tabnext<CR>', { noremap = true, silent = tr
 vim.api.nvim_set_keymap('n', '[T', ':tabfirst<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', ']T', ':tablast<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
-
-vim.cmd('set viminfo=')
 
 require('lazy').setup({
     { 'junegunn/fzf', run = function() vim.fn['fzf#install']() end },
