@@ -1,8 +1,5 @@
-vim.cmd('colorscheme sorbet')
-
 vim.opt.autoread = true
 vim.opt.clipboard = 'unnamedplus'
-vim.opt.cursorline = true
 vim.opt.expandtab = true
 vim.opt.hlsearch = true
 vim.opt.ignorecase = true
@@ -14,6 +11,7 @@ vim.opt.shiftwidth = 4
 vim.opt.showtabline = 4
 vim.opt.smartcase = true
 vim.opt.tabstop = 4
+vim.opt.termguicolors = true
 
 vim.api.nvim_set_keymap('c', '<C-a>', '<Home>', { noremap = true, silent = false })
 vim.api.nvim_set_keymap('c', '<C-f>', '<Right>', { noremap = true, silent = false })
@@ -26,6 +24,15 @@ vim.api.nvim_set_keymap('n', ']T', ':tablast<CR>', { noremap = true, silent = tr
 vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
 
 require('lazy').setup({
+    {
+        'cocopon/iceberg.vim',
+        config = function()
+            vim.cmd('colorscheme iceberg')
+            vim.api.nvim_set_hl(0, 'LineNr', { fg = '#5eacd3' })
+            vim.api.nvim_set_hl(0, 'CursorLine', { bg = '#2a2a2a' })
+            vim.opt.cursorline = true
+        end
+    },
     { 'junegunn/fzf', run = function() vim.fn['fzf#install']() end },
     'junegunn/fzf.vim',
 })
