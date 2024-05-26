@@ -1,3 +1,5 @@
+vim.cmd('colorscheme sorbet')
+
 vim.opt.autoread = true
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.cursorline = true
