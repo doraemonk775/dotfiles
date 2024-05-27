@@ -31,6 +31,7 @@ require('lazy').setup({
             vim.api.nvim_set_hl(0, 'LineNr', { fg = '#5eacd3' })
             vim.api.nvim_set_hl(0, 'CursorLine', { bg = '#2a2a2a' })
             vim.opt.cursorline = true
+            vim.api.nvim_set_hl(0, 'Visual', { bg = '#444444' })
         end
     },
     { 'junegunn/fzf', run = function() vim.fn['fzf#install']() end },
