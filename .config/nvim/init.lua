@@ -34,9 +34,15 @@ require('lazy').setup({
             vim.api.nvim_set_hl(0, 'Visual', { bg = '#444444' })
         end
     },
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' }
+    },
     { 'junegunn/fzf', run = function() vim.fn['fzf#install']() end },
     'junegunn/fzf.vim',
 })
+
+require('lualine').setup()
 
 vim.g.mapleader = ' '
 vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>', { noremap = true, silent = true })
