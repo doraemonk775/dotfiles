@@ -40,11 +40,17 @@ require('lazy').setup({
         'nvim-lualine/lualine.nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons' }
     },
+    {
+        'akinsho/bufferline.nvim',
+        version = "*",
+        dependencies = { 'nvim-tree/nvim-web-devicons' }
+    },
     { 'junegunn/fzf', run = function() vim.fn['fzf#install']() end },
     'junegunn/fzf.vim',
 })
 
 require('lualine').setup()
+require('bufferline').setup()
 
 vim.g.mapleader = ' '
 vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>', { noremap = true, silent = true })
