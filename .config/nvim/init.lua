@@ -2,9 +2,7 @@ vim.opt.autoread = true
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.cursorline = true
 vim.opt.expandtab = true
-vim.opt.hlsearch = true
 vim.opt.ignorecase = true
-vim.opt.incsearch = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.shada = ""
@@ -31,9 +29,11 @@ require('lazy').setup({
         'cocopon/iceberg.vim',
         config = function()
             vim.cmd('colorscheme iceberg')
-            vim.api.nvim_set_hl(0, 'CursorLine', { bg = '#2a2a2a' })
-            vim.api.nvim_set_hl(0, 'LineNr', { fg = '#696969' })
-            vim.api.nvim_set_hl(0, 'Visual', { bg = '#444444' })
+            vim.api.nvim_set_hl(0, 'CursorLine', { bg = '#555555' })
+            vim.api.nvim_set_hl(0, 'LineNr', { fg = '#808080' })
+            vim.api.nvim_set_hl(0, 'Visual', { bg = '#555555' })
+            vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
+            vim.api.nvim_set_hl(0, 'NormalNC', { bg = 'none' })
         end
     },
     {
