@@ -31,9 +31,9 @@ require('lazy').setup({
             vim.cmd('colorscheme iceberg')
             vim.api.nvim_set_hl(0, 'CursorLine', { bg = '#555555' })
             vim.api.nvim_set_hl(0, 'LineNr', { fg = '#808080' })
-            vim.api.nvim_set_hl(0, 'Visual', { bg = '#555555' })
             vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
             vim.api.nvim_set_hl(0, 'NormalNC', { bg = 'none' })
+            vim.api.nvim_set_hl(0, 'Visual', { bg = '#555555' })
         end
     },
     {
