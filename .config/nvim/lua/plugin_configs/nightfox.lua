@@ -1,4 +1,4 @@
-vim.cmd('colorscheme nordfox')
+vim.cmd('colorscheme carbonfox')
 -- vim.api.nvim_set_hl(0, 'CursorLine', { bg = '#555555' })
 -- vim.api.nvim_set_hl(0, 'LineNr', { fg = '#808080' })
 vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
