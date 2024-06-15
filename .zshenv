@@ -10,7 +10,11 @@ case `uname -s` in
 esac
 export PATH
 
-export LANG="ja_JP.UTF-8"
+# garbled characters on WSL
+if [[ `uname -r` != *microsoft* ]]; then
+    export LANG="ja_JP.UTF-8"
+fi
+
 export EDITOR=`which nvim`
 
 if [[ -f ~/.zshenv.local ]]; then
