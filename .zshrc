@@ -24,7 +24,14 @@ alias vim='nvim'
 
 bindkey -e
 
-source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+case `uname -s` in
+  Darwin)
+    source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+    ;;
+  *)
+    source ~/powerlevel10k/powerlevel10k.zsh-theme
+    ;;
+esac
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
