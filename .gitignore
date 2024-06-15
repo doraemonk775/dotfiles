@@ -4,6 +4,7 @@
 ## not ignore
 !/.config/
 !/.config/**
+/.config/iterm2/**
 /.config/karabiner/**
 !/.config/karabiner/karabiner.json
 !.gitignore
