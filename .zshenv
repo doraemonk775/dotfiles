@@ -12,3 +12,7 @@ export PATH
 
 export LANG="ja_JP.UTF-8"
 export EDITOR=`which nvim`
+
+if [[ -f ~/.zshenv.local ]]; then
+    source ~/.zshenv.local
+fi
