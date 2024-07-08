@@ -2,7 +2,7 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
 config.color_scheme = 'carbonfox'
-config.font = wezterm.font('UDEV Gothic NFLG', { weight = 'Bold' })
+config.font = wezterm.font('UDEV Gothic 35NFLG')
 config.font_size = 12
 config.hide_tab_bar_if_only_one_tab = true
 config.initial_cols = 160
