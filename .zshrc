@@ -26,6 +26,10 @@ alias vim='nvim'
 
 bindkey -e
 
+if [[ -f ~/.zshrc.local ]]; then
+    source ~/.zshrc.local
+fi
+
 case `uname -s` in
     Darwin)
         source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
