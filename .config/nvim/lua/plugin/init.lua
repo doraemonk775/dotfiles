@@ -51,4 +51,10 @@ require('lazy').setup({
             require('plugin.config.telescope')
         end
     },
+    {
+        'lukas-reineke/indent-blankline.nvim',
+        config = function()
+            require('plugin.config.indent-blankline')
+        end
+    },
 })
