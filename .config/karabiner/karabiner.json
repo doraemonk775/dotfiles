@@ -110,6 +110,24 @@
                                 "type": "basic"
                             }
                         ]
+                    },
+                    {
+                        "description": "option-l to sleep display like Windows-l",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": { "mandatory": ["option"] }
+                                },
+                                "to": [
+                                    { 
+                                        "consumer_key_code": "eject",
+                                        "modifiers": [ "control", "shift" ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     }
                 ]
             },
