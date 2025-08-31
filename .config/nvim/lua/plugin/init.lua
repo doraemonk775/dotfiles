@@ -57,4 +57,12 @@ require('lazy').setup({
             require('plugin.config.indent-blankline')
         end
     },
+    {
+        'zbirenbaum/copilot.lua',
+        cmd = 'Copilot',
+        event = 'InsertEnter',
+        config = function()
+            require('plugin.config.copilot')
+        end
+    },
 })
