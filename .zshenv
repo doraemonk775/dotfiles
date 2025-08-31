@@ -1,22 +1,39 @@
+# ==========================
+# Global Config
+# ==========================
 setopt NO_GLOBAL_RCS
-PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-case `uname -s` in
+
+# ==========================
+# PATH Settings
+# ==========================
+# Base PATH
+PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
+case "$(uname -s)" in
     Linux)
-        # no operation
+        # No changes for Linux
         ;;
     Darwin)
-        PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$PATH
+        PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
         ;;
 esac
+
 export PATH
 
-# garbled characters on WSL
-if [[ `uname -r` != *microsoft* ]]; then
+# ==========================
+# Locale
+# ==========================
+# Avoid garbled characters (skip on WSL)
+if [[ "$(uname -r)" != *microsoft* ]]; then
     export LANG="ja_JP.UTF-8"
 fi
 
-export EDITOR=`which nvim`
+# ==========================
+# Default Editor
+# ==========================
+export EDITOR="$(command -v nvim || echo vim)"
 
-if [[ -f ~/.zshenv.local ]]; then
-    source ~/.zshenv.local
-fi
+# ==========================
+# Local Overrides
+# ==========================
+[[ -f "$HOME/.zshenv.local" ]] && source "$HOME/.zshenv.local"
