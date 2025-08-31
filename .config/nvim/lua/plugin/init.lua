@@ -36,6 +36,12 @@ require('lazy').setup({
             require('plugin.config.nightfox')
         end 
     },
+    {
+        'lukas-reineke/indent-blankline.nvim',
+        config = function()
+            require('plugin.config.indent-blankline')
+        end
+    },
     { 
         'nvim-lualine/lualine.nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons' },
@@ -49,12 +55,6 @@ require('lazy').setup({
         depencies = { 'nvim-lua/plenary.nvim' },
         config = function() 
             require('plugin.config.telescope')
-        end
-    },
-    {
-        'lukas-reineke/indent-blankline.nvim',
-        config = function()
-            require('plugin.config.indent-blankline')
         end
     },
     {
