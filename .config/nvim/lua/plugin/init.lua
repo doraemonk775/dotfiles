@@ -37,11 +37,19 @@ require('lazy').setup({
         end 
     },
     {
-        'lukas-reineke/indent-blankline.nvim',
+        'folke/snacks.nvim',
+        priority = 1000,
+        lazy = false,
         config = function()
-            require('plugin.config.indent-blankline')
+            require('plugin.config.snacks')
         end
     },
+    -- {
+    --     'lukas-reineke/indent-blankline.nvim',
+    --     config = function()
+    --         require('plugin.config.indent-blankline')
+    --     end
+    -- },
     { 
         'nvim-lualine/lualine.nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons' },
@@ -49,14 +57,14 @@ require('lazy').setup({
             require('plugin.config.lualine')
         end 
     },
-    { 
-        'nvim-telescope/telescope.nvim',
-        tag = '0.1.6',
-        depencies = { 'nvim-lua/plenary.nvim' },
-        config = function() 
-            require('plugin.config.telescope')
-        end
-    },
+    -- {
+    --     'nvim-telescope/telescope.nvim',
+    --     tag = '0.1.6',
+    --     depencies = { 'nvim-lua/plenary.nvim' },
+    --     config = function()
+    --         require('plugin.config.telescope')
+    --     end
+    -- },
     {
         'zbirenbaum/copilot.lua',
         cmd = 'Copilot',
