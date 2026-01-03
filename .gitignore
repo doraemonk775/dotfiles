@@ -15,9 +15,10 @@
 /.config/karabiner/**
 !/.config/karabiner/karabiner.json
 
-# Ignore local overrides in zsh
+# Ignore local overrides and cache in zsh
 /.config/zsh/.zshrc.local
 /.config/zsh/.zshenv.local
+/.config/zsh/.zcompdump*
 
 # Track root files
 !/.gitignore
