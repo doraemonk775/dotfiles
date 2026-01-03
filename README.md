@@ -5,7 +5,7 @@ Personal dotfiles for macOS with XDG Base Directory support.
 ## Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/dotfiles.git ~/dotfiles
+git clone https://github.com/doraemonk775/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ./scripts/install.sh
 exec zsh
