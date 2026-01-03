@@ -8,7 +8,9 @@ fi
 # ==========================
 # History Settings
 # ==========================
-HISTFILE="$HOME/.zsh_history"
+# Ensure history directory exists
+[[ -d "${XDG_STATE_HOME:-$HOME/.local/state}/zsh" ]] || mkdir -p "${XDG_STATE_HOME:-$HOME/.local/state}/zsh"
+HISTFILE="${XDG_STATE_HOME:-$HOME/.local/state}/zsh/history"
 HISTSIZE=1000
 SAVEHIST=1000
 
@@ -39,7 +41,7 @@ bindkey -e
 # ==========================
 # Local Overrides
 # ==========================
-[[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
+[[ -f "$ZDOTDIR/.zshrc.local" ]] && source "$ZDOTDIR/.zshrc.local"
 
 # ==========================
 # Powerlevel10k Theme
@@ -54,7 +56,7 @@ case "$(uname -s)" in
 esac
 
 # Custom prompt configuration
-[[ -f "$HOME/.p10k.zsh" ]] && source "$HOME/.p10k.zsh"
+[[ -f "$ZDOTDIR/.p10k.zsh" ]] && source "$ZDOTDIR/.p10k.zsh"
 
 # ==========================
 # Node.js & NVM

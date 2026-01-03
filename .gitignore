@@ -1,16 +1,25 @@
-## all ignore
+# Ignore everything by default
 /*
 
-## not ignore
+# Track these directories
 !/.config/
 !/.config/**
+!/home/
+!/home/**
+!/scripts/
+!/scripts/**
+
+# Ignore generated/private configs in .config
 /.config/github-copilot/**
 /.config/iterm2/**
 /.config/karabiner/**
 !/.config/karabiner/karabiner.json
-!.gitignore
-!/.p10k.zsh
-!/.zshenv
-!/.zshrc
+
+# Ignore local overrides in zsh
+/.config/zsh/.zshrc.local
+/.config/zsh/.zshenv.local
+
+# Track root files
+!/.gitignore
 !/README.md
 !/CLAUDE.md

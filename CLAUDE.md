@@ -6,10 +6,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a personal dotfiles repository for macOS, managing configurations for a terminal-centric development workflow with Japanese language support.
 
+## Directory Structure
+
+- **`.config/`** - XDG-compliant configuration directory (symlinked to `~/.config/`)
+- **`home/`** - Files to be symlinked directly to `$HOME` (e.g., `.zshenv`)
+- **`scripts/`** - Installation and utility scripts
+
 ## Managed Configurations
 
 - **Neovim** (`.config/nvim/`) - Lua-based configuration with Lazy.nvim plugin manager
-- **Zsh** (`.zshrc`, `.zshenv`, `.p10k.zsh`) - Shell with Powerlevel10k theme
+- **Zsh** (`.config/zsh/`, `home/.zshenv`) - XDG-compliant shell with Powerlevel10k theme
 - **WezTerm** (`.config/wezterm/`) - Terminal emulator
 - **Tmux** (`.config/tmux/`) - Terminal multiplexer
 - **Karabiner-Elements** (`.config/karabiner/`) - macOS keyboard remapper for Vim/IME integration
@@ -32,8 +38,11 @@ Lazy.nvim bootstraps itself on first launch; no manual plugin installation neede
 
 ## Shell Configuration
 
-Zsh uses the local override pattern:
-- `.zshrc.local` and `.zshenv.local` are sourced if present (not tracked in git)
+Zsh is configured with XDG Base Directory support:
+- `home/.zshenv` sets `ZDOTDIR=$XDG_CONFIG_HOME/zsh` and is symlinked to `~/.zshenv`
+- `.config/zsh/.zshrc` and `.config/zsh/.p10k.zsh` contain the main configuration
+- Local overrides (`.zshrc.local`, `.zshenv.local`) are sourced from `$ZDOTDIR` if present
+- History is stored in `$XDG_STATE_HOME/zsh/history`
 - Platform-aware PATH management for macOS/Homebrew and Linux
 
 ## Karabiner Rules
